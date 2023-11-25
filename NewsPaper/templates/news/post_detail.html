@@ -1,0 +1,14 @@
+{% extends 'flatpages/default.html' %}
+{% load custom_filters %}
+
+
+{% block title %}
+ Пост подробнее
+{% endblock title%}
+
+{% block content%}
+Автор: {{ Post.author }}<br>
+Заголовок: {{ Post.title|censor }}<br>
+Текст: {{ Post.text|censor}} <br>
+Дата создания: {{ Post.dateCreation|date:'d M Y'}}
+{% endblock content%}
